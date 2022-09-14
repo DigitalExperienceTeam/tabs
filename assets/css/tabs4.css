@@ -1,0 +1,138 @@
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-button {
+  box-sizing: border-box;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px;
+  transition: 0.3s;
+  width: 40px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  font-size: 0.6em;
+ 
+}
+
+.tab-button:first-of-type {
+  z-index: 5;
+  background: #aaa;
+}
+
+.tab-button:nth-of-type(2) {
+  z-index: 4;
+  background: #bbb;
+}
+
+.tab-button:nth-of-type(3) {
+  z-index: 3;
+  background: #ccc;
+}
+
+.tab-button:nth-of-type(4) {
+  z-index: 2;
+  background: #ddd;
+}
+
+.tab-button:last-of-type {
+   z-index: 1;
+   background: #eee;
+}
+
+.tab-button.current-tab {
+  background: #dc0050;
+  color: #ffffff;
+  z-index: 6;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+
+/* Change background color of buttons on hover */
+.tab-button:hover {
+  background-color: #666;
+  color: #FFF;
+}
+
+.current-tab:hover {
+  background: #dc0050;
+  color: #fff;
+  cursor: auto;
+}
+
+.tab-button:focus-visible {
+  background: red;
+} 
+
+.tab-button span {
+  display: none;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px 20px 0;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#pages-tab {
+    display: block;
+}
+
+.results {
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width: 450px) {
+  .tab-button {
+    font-size: 0.8em;
+    width: 60px
+  }
+
+}
+
+@media only screen and (min-width: 680px) {
+  .tab-button {
+    width: 20%;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    
+  }
+
+  .tab-button i {
+    margin-right: 7px;
+  }
+
+  .tab-button span {
+    display: inline;
+  }
+
+  .tab-button:nth-of-type(2) {
+    left: -20px;
+  }
+
+  .tab-button:nth-of-type(3) {
+    left: -40px;
+  }
+
+  .tab-button:nth-of-type(4) {
+    left: -60px;
+ }
+
+ .tab-button:last-of-type {
+  left: -80px;
+}
+
+}
+
+

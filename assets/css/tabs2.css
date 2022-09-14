@@ -1,0 +1,112 @@
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab-button {
+    box-sizing: border-box;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px;
+    transition: 0.3s;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    width: 100%;
+    text-align: left;
+    background-color: #f1f1f1;
+    font-size: 0.9em;
+  }
+
+  .tab-button i {
+    float: right;
+    font-size: 25px;
+    line-height: 20px;
+  }
+
+  .tab-button:first-of-type {
+    border-left: 1px solid #ccc;
+ }
+  .tab-button:last-of-type {
+     border-right: 1px solid #ccc;
+  }
+
+  .tab-button:first-of-type.current-tab {
+    border-left: 1px solid #666;
+ }
+
+ .tab-button:last-of-type.current-tab {
+  border-left: 1px solid #666;
+}
+
+  .current-tab {
+    background: #00193c;
+    border-top: 1px solid #00193c;
+    border-bottom: 1px solid #00193c;
+    color: #fff;
+  }
+
+  .current-tab i {
+    display: none;
+  }
+
+  .tab ~ tab-button {
+    border-left: 1px solid #666;
+  }
+
+  .tab-button:focus {
+    outline: none;
+   
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab-button:hover {
+    background-color: #aaa;
+    color: #000;
+  }
+
+  .current-tab:hover {
+    background: #666;
+    color: #fff;
+    cursor: auto;
+  }
+  
+  .tab-button:focus-visible {
+    background: red;
+  } 
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 20px 20px 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-bottom: 50px;
+  }
+
+  #pages-tab {
+      display: block;
+  }
+
+  .results {
+    font-size: 0.9em;
+  }
+
+  @media only screen and (min-width: 576px) {
+    .tab-button {
+      width: 25%;
+      text-align: center;
+      border-radius: 25px 25px 0 0;
+    }
+
+    .tab-button i {
+      display: none;
+    }
+
+  }
