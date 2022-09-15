@@ -1,0 +1,131 @@
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-button {
+  box-sizing: border-box;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px;
+  transition: 0.3s;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  position: relative;
+  font-size: 0.9em;
+}
+
+.tab-button:first-of-type {
+  z-index:4;
+  background: #bbb;
+}
+
+.tab-button:nth-of-type(2) {
+  z-index: 3;
+  background: #ccc;
+}
+
+.tab-button:nth-of-type(3) {
+  z-index: 2;
+  background: #ddd;
+}
+
+.tab-button:last-of-type {
+   z-index: 1;
+   background: #eee;
+}
+
+.tab-button.current-tab {
+  background: #00193c;
+  color: #fff;
+  z-index: 5;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+
+/* Change background color of buttons on hover */
+.tab-button:hover {
+  background-color: #666;
+  color: #FFF;
+}
+
+.current-tab:hover {
+  background: #00193c;
+  color: #fff;
+  cursor: auto;
+}
+
+.current-tab .fa-caret-down {
+  display: none;
+}
+
+.tab-button:focus-visible {
+  background: red;
+} 
+
+.tab-button i:first-of-type {
+  margin-right: 12px;
+  width: 20px;
+}
+
+.tab-button .fa-caret-down {
+  float: right;
+  font-size: 25px;
+  line-height: 20px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px 20px 0;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#pages-tab {
+    display: block;
+}
+
+.results {
+  font-size: 14.4px;
+}
+
+@media only screen and (min-width: 750px) {
+  .tab-button {
+    width: 25%;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    font-size: 0.8em;
+  }
+
+  .tab-button i:first-of-type {
+    margin-right: 7px;
+    width: auto;
+  }
+
+  .tab-button .fa-caret-down {
+    display: none;
+  }
+
+  .tab-button:nth-of-type(2) {
+    left: -20px;
+  }
+
+  .tab-button:nth-of-type(3) {
+    left: -40px;
+  }
+
+  .tab-button:last-of-type {
+    left: -60px;
+ }
+
+}
+
